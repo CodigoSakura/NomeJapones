@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Converta seu nome</h2>
+  <p>Você deseja saber como escrever em japonês o seu nome, ou o nome de um amigo ou parente? Seja por curiosidade, para fazer uma tatuagem (definitiva ou temporária), ou para o que mais você imaginar!</p>
+  <br>
+  <form aaction="{{ url_for('receive_user_name') }}" method=post>
+    <dl>
+      <dt>Escreva seu nome, sem acento:
+      <dd><input type=text name=user_name>
+
+      <dd><input type=submit value=Converter>
+    </dl>
+  </form>
+  <br>
+  <p>Seja em Katakana, Hiragana ou Kanji (ideogramas), traduza e transcreva seu nome e sobrenome em Kanji (ideogramas de origem chinesa usados na língua japonesa), Hiragana e Katakana, gratuitamente.</p>
+  <br>
+
+  <p>Quer um exemplo?</p>
+  <p>Janice</p>
+  <p>Hiragana: じあにせ</p>
+  <p>Katakana: ジあニセ</p>
+  <p>Kanji / ideograma: 治亜仁世</p>
+{% endblock %}

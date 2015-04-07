@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+  <ul class=entries>
+    <li>{{ nome_latin }}</li>
+    <li>Hiragana: {{ nome_hiragana }}</li>
+    <li>Katakana: {{ nome_katakana }}</li>
+    <li>Kanji (Ideograma): {{ nome_kanji }}</li>
+  </ul>
+  <br>
+  <p>Obrigado pela visita e volte sempre!</p>
+  <p>Deseja converter outro nome?</p>
+  <p><a href="https://nomejapones.info">Clique aqui para voltar para a página inicial</a></p>
+{% endblock %}  

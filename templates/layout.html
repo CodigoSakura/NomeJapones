@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8" />
+
+<title>Seu nome em Japonês</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class=page>
+      <h1><a href="https://nomejapones.info">Seu nome em Japonês – Kanji (ideograma), Katakana e Hiragana</a></h1>
+      <div class=metanav>
+         {% if error %}<p class=error><strong>Erro:</strong> {{ error }}{% endif %}
+        {% for message in get_flashed_messages() %}
+            <div class=flash>{{ message }}</div>
+        {% endfor %}
+      </div>
+      {% for message in get_flashed_messages() %}
+        <div class=flash>{{ message }}</div>
+      {% endfor %}
+      {% block body %}{% endblock %}
+      <div class=metanav>
+       <a href="{{ url_for('sobre') }}">sobre</a>
+      </div>
+    </div>
+</body>
+<footer></footer>
